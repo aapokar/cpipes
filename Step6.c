@@ -17,20 +17,20 @@ int main()
                 char e;
                 while((e=getc(stdin))!=EOF)
                 {
-                    if(d=='\n')
-                    return;
+                    if(e=='\n')
+                    break;
                 }
             }
             else
             {
-                printf(c);
-                printf(d);
+                putc(c, stdout);
+                putc(d, stdout);
             }
         }
 
     // again, if all above fails, we add the character as it is in the new file.
         else
-            printf(c);
-        }
-
+            putc(c, stdout);
+    }
+    return 0;
 }

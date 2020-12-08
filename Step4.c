@@ -5,10 +5,10 @@
 int main()
 {
    char text[100], target[100];
+ 
+   while ((fgets(text, 100, stdin)) != NULL) {
    int c = 0, d = 0;
- 
-   gets(stdin);
- 
+
    while (text[c] != '\0')
    {
       if (!(text[c] == ' ' && text[c+1] == ' ')) {
@@ -21,6 +21,7 @@ int main()
    target[d] = '\0';
  
    printf("%s", target);
+   }
  
    return 0;
 }

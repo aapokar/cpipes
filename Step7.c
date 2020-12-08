@@ -15,27 +15,27 @@ int main()
             if((d=getc(stdin))=='*')   
             {
                 char e,f;
-                while((e=gets(stdin))!=EOF)
+                while((e=getc(stdin))!=EOF)
                 {
                     if(e=='*')    // if the comment 'seems' like ending
                     {
                         f=getc(stdin);  // check if it actually ends (block comments end with '*/')
 
                         if(f=='/')  // if the comment 'has' ended, return from the function
-                            return;
+                            break;
                     }
                 }
             }
             else
             {
-                printf(c);
-                printf(d);
+                putc(c, stdout);
+                putc(d, stdout);
             }
         }
 
     // again, if all above fails, we add the character as it is in the new file.
         else
-            printf(c);
+            putc(c, stdout);
         }
 
 }

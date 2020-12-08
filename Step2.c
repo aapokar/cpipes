@@ -22,7 +22,7 @@ int isEmpty(const char *str)
 }
 
 
-void Step2()
+void main()
 {
 
     char buffer[BUFFER_SIZE];
@@ -30,6 +30,6 @@ void Step2()
     while ((fgets(buffer, BUFFER_SIZE, stdin)) != NULL)
     {
         if(!isEmpty(buffer))
-            printf(buffer);
+            printf("%s",buffer);
     }
 }

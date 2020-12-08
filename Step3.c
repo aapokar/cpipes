@@ -2,10 +2,10 @@
 #include <string.h>
 #define BUFFER_SIZE 1000
 
-void Step3() 
+void main() 
 {
     char buffer[BUFFER_SIZE];
-    while (gets(buffer) != NULL)
+    while ((fgets(buffer, BUFFER_SIZE, stdin)) != NULL)
     {
     int index, i;
     index = -1;
@@ -20,7 +20,7 @@ void Step3()
         i++;
     }
     /* Mark next character to last non-white space character as null */
-    buffer[index + 1] = '\0';
+    buffer[index + 1] = '\n';
+    printf("%s",buffer);
     }
-    printf(buffer);
 }

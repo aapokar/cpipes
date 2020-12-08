@@ -3,8 +3,10 @@
 #define FALSE 0
 #define TRUE 1
 
-// Definition of a word: a non whitespace char[] before whitespace char
+// Definition of a word: a non whitespace char array before whitespace char
 // Reads a single char: use insideWord to detect words
+/* block comment */
+
 
 void main()
 {
@@ -19,14 +21,13 @@ void main()
     while ( c != EOF) {
         if (c == '\n') {
             whiteSpaces++;
-            // printf("[%d,%d]\n", chars, words, whiteSpaces);
             insideWord = FALSE;
             lines++;
             // printf("%c", c);
         } else {
             chars ++;
             // printf("%c", c);
-            if (c == ' ' || c == '\n' || c == '\t') {
+            if (c == ' ' || c == '\t') {
                 whiteSpaces++;
                 insideWord = FALSE;
             } else if (insideWord == FALSE) {
@@ -36,6 +37,6 @@ void main()
         }
         c = getchar();
     }
-// printf("[%d,%d,%d,%d]\n", chars, words, whiteSpaces, lines);
+printf("[%d,%d,%d,%d]\n", chars, words, whiteSpaces, lines);
 
 }
