@@ -4,7 +4,7 @@
 
 // Reads stdin
 // Checks if on the read line is a non whitespace character
-// If not, prints it to stdout
+// If yes, prints it to stdout
 
 int isEmpty(const char *str)
 {

@@ -23,10 +23,10 @@ void main()
             whiteSpaces++;
             insideWord = FALSE;
             lines++;
-            // printf("%c", c);
+
         } else {
             chars ++;
-            // printf("%c", c);
+
             if (c == ' ' || c == '\t') {
                 whiteSpaces++;
                 insideWord = FALSE;
@@ -37,6 +37,6 @@ void main()
         }
         c = getchar();
     }
-printf("[%d,%d,%d,%d]\n", chars, words, whiteSpaces, lines);
+printf("chars:%d\nwords:%d\nwhites:%d\nlines:%d]\n", chars, words, whiteSpaces, lines);
 
 }
